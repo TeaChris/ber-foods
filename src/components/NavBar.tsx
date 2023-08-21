@@ -42,7 +42,7 @@ const NavBar: FC<NavBarProps> = ({}) => {
           <div className="hidden lg:block w-96 h-fit">
             <Input
               disabled
-              type="email"
+              type="text"
               placeholder="Enter item or restaurant you're looking for"
             />
           </div>
@@ -50,7 +50,7 @@ const NavBar: FC<NavBarProps> = ({}) => {
             <CartIcon />
           </div>
 
-          <div className="hidden w-28 h-full lg:grid place-items-center">
+          <div className="hidden w-24 h-full lg:grid place-items-center">
             <Link
               href="/sign-in"
               className={cn(
@@ -58,7 +58,7 @@ const NavBar: FC<NavBarProps> = ({}) => {
                 'self-start'
               )}
             >
-              sign-in
+              sign in
             </Link>
           </div>
         </div>

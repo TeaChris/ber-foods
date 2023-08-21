@@ -6,11 +6,14 @@ interface CartIconProps {}
 
 const CartIcon: FC<CartIconProps> = ({}) => {
   return (
-    <Link href="/cart" className="flex items-center gap-1">
-      <div className="relative w-8 h-8 md:w-5 md:h-5">
+    <Link
+      href="/cart"
+      className="flex items-center gap-0 lg:w-13 justify-center"
+    >
+      <div className="relative w-8 h-8 md:w-8 md:h-8">
         <Image src="/icons/Bag.svg" alt="" fill />
       </div>
-      <span>(3)</span>
+      <span className="text-sm font-bold">(3)</span>
     </Link>
   )
 }
