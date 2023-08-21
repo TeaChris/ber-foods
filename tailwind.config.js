@@ -70,7 +70,7 @@ module.exports = {
           200: '#2F7C31',
           300: '#1AC84B',
         },
-        black: '202020',
+        black: '#202020',
       },
       borderRadius: {
         lg: 'var(--radius)',
