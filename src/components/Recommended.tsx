@@ -50,7 +50,7 @@ const Recommended: FC<RecommendedProps> = ({}) => {
                   <div className="recommended_mins">
                     <Image
                       src="/icons/mins.svg"
-                      alt={item.mins}
+                      alt={item.title}
                       width={20}
                       height={20}
                     />
@@ -59,7 +59,7 @@ const Recommended: FC<RecommendedProps> = ({}) => {
                   <div className="recommended_mins">
                     <Image
                       src="/icons/people.svg"
-                      alt={item.mins}
+                      alt={item.title}
                       width={20}
                       height={20}
                     />
@@ -88,44 +88,26 @@ const Recommended: FC<RecommendedProps> = ({}) => {
                   <Balancer>{item.title}</Balancer>
                 </h4>
                 <div className="recommended_rating">
-                  <p className="recommended_location">{item.location}</p>
-                  <div className="recommended_star">
-                    {item.rating >= 4.0 ? (
-                      <Image
-                        src="/icons/green-star.svg"
-                        alt={item.title}
-                        width={15}
-                        height={15}
-                      />
-                    ) : (
-                      <Image
-                        src="/icons/orange-star.svg"
-                        alt={item.title}
-                        width={15}
-                        height={15}
-                      />
-                    )}
-                    <span>{item.rating}</span>
-                  </div>
+                  <p className="recommended_location">{item.desc}</p>
                 </div>
                 <div className="recommended_time">
                   <div className="recommended_mins">
                     <Image
+                      src="/icons/tag.svg"
+                      alt={item.title}
+                      width={20}
+                      height={20}
+                    />
+                    <span className="">${item.price}</span>
+                  </div>
+                  <div className="recommended_mins">
+                    <Image
                       src="/icons/mins.svg"
-                      alt={item.mins}
+                      alt={item.title}
                       width={20}
                       height={20}
                     />
                     <span className="">{item.mins}</span>
-                  </div>
-                  <div className="recommended_mins">
-                    <Image
-                      src="/icons/people.svg"
-                      alt={item.mins}
-                      width={20}
-                      height={20}
-                    />
-                    <span className="">{item.people}</span>
                   </div>
                 </div>
               </div>

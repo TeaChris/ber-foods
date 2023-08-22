@@ -20,11 +20,10 @@ import p3 from '../public/images/p3.png'
 type Product = {
   id: number
   title: string
-  desc?: string
   img: StaticImageData
-  price?: number
+  price: number
   rating: number
-  location?: string
+  location: string
   mins: string
   people: string
   options?: { title: string; additionalPrice: number }[]
@@ -131,16 +130,24 @@ export const restaurant: Products = [
   },
 ]
 
-export const foods: Products = [
+type Food = {
+  id: number
+  title: string
+  desc?: string
+  img: StaticImageData
+  price?: number
+  mins?: string
+  options?: { title: string; additionalPrice: number }[]
+}[]
+
+export const foods: Food = [
   {
     id: 1,
-    title: 'chicken lovers',
+    title: 'Nigerian Rice Bowl',
     img: f1,
-    price: 24.9,
-    rating: 4.0,
-    location: 'lagos, ikeja',
+    price: 200,
+    desc: 'the good bowl',
     mins: '20 mins',
-    people: '150 for two',
     options: [
       {
         title: 'Small',
@@ -158,13 +165,11 @@ export const foods: Products = [
   },
   {
     id: 2,
-    title: 'chicken republic',
+    title: 'Curd Meal (2 pcs)',
     img: f2,
-    price: 24.9,
-    rating: 3.2,
-    location: 'wuse, abuja',
+    price: 159,
+    desc: 'lunch box',
     mins: '30 mins',
-    people: '200 for two',
     options: [
       {
         title: 'Small',
@@ -182,13 +187,11 @@ export const foods: Products = [
   },
   {
     id: 3,
-    title: 'mr biggs',
+    title: 'Baked Pizza Wrap',
     img: f3,
-    price: 24.9,
-    rating: 4.5,
-    location: 'iwo-road ibadan',
+    price: 150,
+    desc: 'Faasos - Wraps & Rolls',
     mins: '40 mins',
-    people: '300 for two',
     options: [
       {
         title: 'Small',
@@ -206,13 +209,11 @@ export const foods: Products = [
   },
   {
     id: 4,
-    title: 'sweet sensation',
+    title: 'Fried Rice & fruits',
     img: f4,
     price: 24.9,
-    rating: 4.8,
-    location: 'sango, ogun',
+    desc: 'mfc restaurant',
     mins: '25 mins',
-    people: '450 for two',
     options: [
       {
         title: 'Small',
@@ -230,7 +231,19 @@ export const foods: Products = [
   },
 ]
 
-export const personalised: Products = [
+type Personalized = {
+  id: number
+  title: string
+  img: StaticImageData
+  price: number
+  desc: string
+  rating: number
+  mins: string
+  people: string
+  options?: { title: string; additionalPrice: number }[]
+}[]
+
+export const personalised: Personalized = [
   {
     id: 1,
     title: 'Baked Pizza Wrap - Vegetarian',
