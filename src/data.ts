@@ -305,7 +305,7 @@ export const personalised: Products = [
   },
   {
     id: 4,
-    title: 'Southwest Chicken Salad',
+    title: 'Southwest Chicken Nigerian Salad',
     img: p3,
     price: 300,
     rating: 4.8,

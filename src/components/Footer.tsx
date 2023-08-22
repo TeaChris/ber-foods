@@ -6,7 +6,7 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
-    <footer className="w-full h-72 bg-orange-400 mt-20 pt-24">
+    <footer className="w-full h-72 bg-orange-400 mt-40 pt-24">
       <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between">
         {/* LOGO */}
         <div className="w-48 h-fit py-1 flex items-center gap-1">
