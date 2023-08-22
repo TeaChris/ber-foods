@@ -4,6 +4,10 @@ import { Input } from '@/components/ui/input'
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import Recommended from '@/components/Recommended'
+import HomeSearch from '@/components/HomeSearch'
+import { mind } from '@/data'
+import Personalised from '@/components/Personalised'
 
 export default function Home() {
   return (
@@ -117,6 +121,38 @@ export default function Home() {
           <div className="w-96 h-48 border-10 border-orange-400 rounded-[9rem] absolute top-32 right-20 z-50 -rotate-45"></div>
         </div>
       </header>
+
+      <Recommended />
+      <HomeSearch />
+
+      {/* mind */}
+      <section className="container mx-auto flex flex-col items-start justify-between h-60 mt-20">
+        <div className="w-full pl-20">
+          <h5 className="text-lg text-black font-bold">
+            What{"'"}s on your mind?
+          </h5>
+        </div>
+
+        <div className="flex items-start justify-between w-full">
+          {mind.map((item) => (
+            <article
+              key={item.id}
+              className="w-60 h-fit flex flex-col items-center gap-8"
+            >
+              <Image
+                src={item.img}
+                alt={item.title}
+                width={100}
+                height={100}
+                className="rounded-full"
+              />
+              <span className="text-lg font-bold text-black">{item.title}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <Personalised />
     </main>
   )
 }

@@ -85,3 +85,50 @@ html {
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* styles */
+@layer components {
+  .recommended {
+    @apply w-[45%] h-full flex flex-col items-start gap-4
+  }
+
+  .recommended_head {
+    @apply text-2xl text-black font-bold capitalize
+  }
+
+  .recommended_item {
+    @apply w-full h-full flex flex-wrap items-center gap-4
+  }
+
+  .recommended_items {
+    @apply w-[47%] h-fit bg-zinc-100 p-6 flex flex-col items-start gap-4 rounded-lg
+  }
+
+  .recommended_title {
+    @apply text-left text-black text-xl font-bold capitalize
+  }
+
+  .recommended_rating {
+    @apply w-full justify-between flex items-center
+  }
+
+  .recommended_location {
+    @apply text-zinc-500 text-sm font-bold capitalize
+  }
+
+  .recommended_star {
+    @apply w-fit flex items-center gap-1
+  }
+
+  .recommended_time {
+    @apply w-full flex items-center justify-between
+  }
+
+  .recommended_mins {
+    @apply w-fit items-center gap-1 flex
+  }
+
+  .recommended_mins>span {
+    @apply text-black font-bold
+  }
+}
