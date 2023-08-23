@@ -382,3 +382,201 @@ export const mind: Minds = [
     img: m6,
   },
 ]
+
+type Menu = {
+  id: number
+  slug: string
+  title: string
+  desc?: string
+  img?: string
+  color: string
+}[]
+
+export const menu: Menu = [
+  {
+    id: 1,
+    slug: 'pastas',
+    title: 'Italian Pastas',
+    desc: 'Savor the taste of perfection with our exquisite Italian handmade pasta menu.',
+    img: '/images/me1.png',
+    color: 'white',
+  },
+  {
+    id: 2,
+    slug: 'burgers',
+    title: 'Juicy Burgers',
+    desc: 'Burger Bliss: Juicy patties, bold flavors, and gourmet toppings galore.',
+    img: '/images/me2.png',
+    color: 'black',
+  },
+  {
+    id: 3,
+    slug: 'pizzas',
+    title: 'Cheesy Pizzas',
+    desc: 'Pizza Paradise: Irresistible slices, mouthwatering toppings, and cheesy perfection.',
+    img: '/images/me3.png',
+    color: 'white',
+  },
+  {
+    id: 4,
+    slug: 'pastas',
+    title: 'Italian Pastas',
+    desc: 'Savor the taste of perfection with our exquisite Italian handmade pasta menu.',
+    img: '/images/me3.png',
+    color: 'white',
+  },
+  {
+    id: 5,
+    slug: 'burgers',
+    title: 'Juicy Burgers',
+    desc: 'Burger Bliss: Juicy patties, bold flavors, and gourmet toppings galore.',
+    img: '/images/me2.png',
+    color: 'black',
+  },
+  {
+    id: 6,
+    slug: 'pizzas',
+    title: 'Cheesy Pizzas',
+    desc: 'Pizza Paradise: Irresistible slices, mouthwatering toppings, and cheesy perfection.',
+    img: '/images/me1.png',
+    color: 'white',
+  },
+]
+
+type Pizzas = {
+  id: number
+  title: string
+  img: StaticImageData
+  price: number
+  desc: string
+  options?: { title: string; additionalPrice: number }[]
+}[]
+
+export const pizzas: Pizzas = [
+  {
+    id: 1,
+    title: 'Sicilian',
+    desc: 'Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.',
+    img: p1,
+    price: 24.9,
+    options: [
+      {
+        title: 'Small',
+        additionalPrice: 0,
+      },
+      {
+        title: 'Medium',
+        additionalPrice: 4,
+      },
+      {
+        title: 'Large',
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Mediterranean Delight',
+    desc: 'Embark on a culinary journey with this Mediterranean-inspired creation, featuring zesty feta cheese, Kalamata olives, sun-dried tomatoes, and a sprinkle of oregano.',
+    img: rt2,
+    price: 32.9,
+    options: [
+      {
+        title: 'Small',
+        additionalPrice: 0,
+      },
+      {
+        title: 'Medium',
+        additionalPrice: 4,
+      },
+      {
+        title: 'Large',
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Bella Napoli',
+    desc: 'A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.',
+    img: p3,
+    price: 26.9,
+    options: [
+      {
+        title: 'Small',
+        additionalPrice: 0,
+      },
+      {
+        title: 'Medium',
+        additionalPrice: 4,
+      },
+      {
+        title: 'Large',
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: 'Pesto Primavera',
+    desc: 'A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.',
+    img: rt4,
+    price: 28.9,
+    options: [
+      {
+        title: 'Small',
+        additionalPrice: 0,
+      },
+      {
+        title: 'Medium',
+        additionalPrice: 4,
+      },
+      {
+        title: 'Large',
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Veggie Supreme',
+    desc: 'A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.',
+    img: f1,
+    price: 24.9,
+    options: [
+      {
+        title: 'Small',
+        additionalPrice: 0,
+      },
+      {
+        title: 'Medium',
+        additionalPrice: 4,
+      },
+      {
+        title: 'Large',
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: 'Four Cheese Fantasy',
+    desc: 'Experience pure cheesy bliss with a melty blend of mozzarella, cheddar, provolone, and Parmesan cheeses, creating a rich and indulgent pizza experience.',
+    img: f2,
+    price: 22.9,
+    options: [
+      {
+        title: 'Small',
+        additionalPrice: 0,
+      },
+      {
+        title: 'Medium',
+        additionalPrice: 4,
+      },
+      {
+        title: 'Large',
+        additionalPrice: 6,
+      },
+    ],
+  },
+]
