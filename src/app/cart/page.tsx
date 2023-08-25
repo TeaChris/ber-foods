@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import { FC } from 'react'
+import { StarIcon } from '@radix-ui/react-icons'
+import CartItems from '@/components/CartItems'
 
 interface CartPageProps {}
 
 const CartPage: FC<CartPageProps> = ({}) => {
   return (
     <main className="w-full h-fit flex flex-col items-start gap-12">
-      <div className="w-full h-72 bg-black">
+      <div className="w-full h-72 bg-black relative">
         <div className="container mx-auto flex items-end justify-center gap-24 pt-4">
           <div className="w-fit h-full flex items-center gap-8">
             <Image
@@ -80,6 +82,8 @@ const CartPage: FC<CartPageProps> = ({}) => {
           </div>
         </div>
       </div>
+
+      <CartItems />
     </main>
   )
 }

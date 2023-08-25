@@ -1,6 +1,7 @@
 'use client'
 
 import { FC, useState, useEffect } from 'react'
+import { CaretLeftIcon, CaretRightIcon } from '@radix-ui/react-icons'
 
 interface PriceProps {
   price: number
@@ -47,13 +48,13 @@ const Price: FC<PriceProps> = ({ price, id, options }) => {
             <button
               onClick={() => setQuantity((prev) => (prev > 1 ? prev - 1 : 1))}
             >
-              {'<'}
+              <CaretLeftIcon className="text-lg" />
             </button>
             <span>{quantity}</span>
             <button
               onClick={() => setQuantity((prev) => (prev < 9 ? prev + 1 : 9))}
             >
-              {'>'}
+              <CaretRightIcon className="text-lg" />
             </button>
           </div>
         </div>

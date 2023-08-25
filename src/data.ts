@@ -16,6 +16,8 @@ import m6 from '../public/images/m6.png'
 import p1 from '../public/images/p1.png'
 import p2 from '../public/images/p2.png'
 import p3 from '../public/images/p3.png'
+import cart1 from '../public/images/cart1.png'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
 type Product = {
   id: number
@@ -611,3 +613,28 @@ export const singleProduct: Single = {
     },
   ],
 }
+
+type Cart = {
+  id: number
+  img: StaticImport
+  title: string
+  desc: string
+  price: number
+}[]
+
+export const cart: Cart = [
+  {
+    id: 1,
+    img: cart1,
+    title: 'brunch for 2 - Veg (save upto $45)',
+    desc: 'Brunch for 2 - Veg (Save upto Rs.45) Brunch: One meal to rule them all! Grab this mega saver combo with your choice of 2 veg wraps, Aloo Paratha (2 pcs), chole and Curd lunchbox and 2 choco lava cakes. This is just bliss on a plate!',
+    price: 599,
+  },
+  {
+    id: 2,
+    img: f4,
+    title: 'brunch for 2 - Veg (save upto $45)',
+    desc: 'Brunch for 2 - Veg (Save upto Rs.45) Brunch: One meal to rule them all! Grab this mega saver combo with your choice of 2 veg wraps, Aloo Paratha (2 pcs), chole and Curd lunchbox and 2 choco lava cakes. This is just bliss on a plate!',
+    price: 599,
+  },
+]
