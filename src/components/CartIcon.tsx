@@ -13,7 +13,7 @@ const CartIcon: FC<CartIconProps> = ({}) => {
       <div className="relative w-8 h-8 md:w-8 md:h-8">
         <Image src="/icons/Bag.svg" alt="" fill />
       </div>
-      <span className="text-sm font-bold">(3)</span>
+      <span className="text-sm font-extrabold">(3)</span>
     </Link>
   )
 }

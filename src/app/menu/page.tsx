@@ -17,11 +17,11 @@ const MenuPage: FC<MenuPageProps> = ({}) => {
               className="w-96 p-8 h-72 rounded-sm bg-cover"
               style={{ backgroundImage: `url(${category.img})` }}
             >
-              <div className={`text-${category.color} w-[70%]`}>
+              <div className={`text-${category.color} w-[80%]`}>
                 <h1 className="uppercase font-bold text-3xl">
                   {category.title}
                 </h1>
-                <p className="text-sm my-8">{category.desc}</p>
+                <p className="text-sm my-8 font-extrabold">{category.desc}</p>
                 <Button
                   className={`hidden 2xl:block bg-${category.color} text-${
                     category.color === 'black' ? 'white' : 'orange-500'
