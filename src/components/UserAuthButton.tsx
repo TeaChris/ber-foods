@@ -18,11 +18,6 @@ const UserAuthButton: FC<UserAuthButtonProps> = ({ className, ...props }) => {
 
     try {
       await signIn('google')
-      toast({
-        title: 'Success',
-        description: 'Sign in with Google successful',
-        variant: 'default',
-      })
     } catch (error) {
       // toast notification
       toast({
@@ -30,8 +25,8 @@ const UserAuthButton: FC<UserAuthButtonProps> = ({ className, ...props }) => {
         description: 'There was an error logging in with Google!',
         variant: 'destructive',
       })
-    } finally {
       setIsLoading(false)
+    } finally {
     }
   }
 

@@ -1,14 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FC } from 'react'
 import { Input } from './ui/input'
 import CartIcon from './CartIcon'
-import { Button, buttonVariants } from './ui/button'
+import { buttonVariants } from './ui/button'
 import { cn } from '@/lib/utils'
+import { getAuthSession } from '@/lib/auth'
+import UserAccountNav from './UserAccountNav'
 
 interface NavBarProps {}
 
-const NavBar: FC<NavBarProps> = ({}) => {
+const NavBar = async ({}) => {
+  const session = await getAuthSession()
   return (
     <nav className="w-full h-20 grid place-items-center relative bg-transparent z-50">
       <div className="container mx-auto flex justify-between items-start">
@@ -51,15 +53,19 @@ const NavBar: FC<NavBarProps> = ({}) => {
           </div>
 
           <div className="hidden w-24 h-full lg:grid place-items-center">
-            <Link
-              href="/sign-in"
-              className={cn(
-                buttonVariants({ variant: 'default' }),
-                'self-start'
-              )}
-            >
-              sign in
-            </Link>
+            {session?.user ? (
+              <UserAccountNav user={session.user} />
+            ) : (
+              <Link
+                href="/sign-in"
+                className={cn(
+                  buttonVariants({ variant: 'default' }),
+                  'self-start'
+                )}
+              >
+                sign in
+              </Link>
+            )}
           </div>
         </div>
       </div>

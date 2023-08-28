@@ -1,3 +1,4 @@
+import AuthProvider from '@/components/AuthProvider'
 import Footer from '@/components/Footer'
 import NavBar from '@/components/NavBar'
 import { Toaster } from '@/components/ui/toaster'
@@ -27,10 +28,12 @@ export default function RootLayout({
       className={cn('bg-white antialiased light', comfort.className)}
     >
       <body className="min-w-full min-h-screen bg-slate-50 antialiased">
-        <NavBar />
-        <div className="w-full h-full pt-12">{children}</div>
-        <Footer />
-        <Toaster />
+        <AuthProvider>
+          <NavBar />
+          <div className="w-full h-full pt-12">{children}</div>
+          <Footer />
+          <Toaster />
+        </AuthProvider>
       </body>
     </html>
   )
